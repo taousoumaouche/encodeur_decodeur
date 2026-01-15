@@ -1,14 +1,14 @@
-================================================================================
+
 Projet L3 Info - Codec d'images DIF
-================================================================================
+
 
 Binôme:
   - Oumaouche Taous
   - Zineddine Nour
 
-================================================================================
+
 Compilation
-================================================================================
+
 
 Pour compiler le projet:
 
@@ -18,9 +18,9 @@ Pour compiler le projet:
 Ça génère la bibliothèque libdif.so dans le dossier CoDec/ et l'exécutable 
 "encodeur" à la racine.
 
-================================================================================
+
 Utilisation
-================================================================================
+
 
 Le programme prend en entrée soit une image (pour l'encoder), soit un fichier
 .dif (pour le décoder)
@@ -40,9 +40,9 @@ Note: Pour les formats autres que PGM/PPM (comme JPEG, PNG, etc.), le
 programme utilise ImageMagick pour les convertir automatiquement. Il faut 
 donc avoir ImageMagick installé sur le système.
 
-================================================================================
+
 Structure du projet
-================================================================================
+
 .
 ├── main.c             
 ├── Makefile           
@@ -54,9 +54,9 @@ Structure du projet
     └── src/
         └── codec.c  
 
-================================================================================
+
 Fonctionnalités implémentées
-================================================================================
+
 
 ✓ Encodage PNM (PGM et PPM) vers format DIF
 ✓ Décodage DIF vers PNM
@@ -71,9 +71,9 @@ Fonctionnalités implémentées
 ✓ Option -r pour générer l'image différentielle (visualisation des variations)
 ✓ Support de la conversion automatique des formats d'image
 
-================================================================================
+
 Détails techniques
-================================================================================
+
 
 Format DIF:
 - Magic number: 0xD1FF (niveaux de gris) ou 0xD3FF (couleur)
@@ -98,9 +98,9 @@ Pipeline de décodage:
 5. Restauration amplitude (multiplication par 2)
 6. Écriture PNM
 
-================================================================================
+
 Problèmes rencontrés et solutions
-================================================================================
+
 
 1. Gestion des commentaires dans les fichiers PNM
    Solution: Fonction dédiée qui saute les lignes commençant par '#'
@@ -115,9 +115,9 @@ Problèmes rencontrés et solutions
    Solution: Respect strict des spécifications du format (endianness, etc.)
 
 
-================================================================================
+
 Notes
-================================================================================
+
 
 Le code compile sans warnings avec -Wall et a été testé sur Ubuntu 24.04 et macOS
 La bibliothèque est bien séparée de l'application principale, ce qui permet
