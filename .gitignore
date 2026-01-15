@@ -1,0 +1,16 @@
+# binaires
+encodeur
+*.o
+*.so
+
+# fichiers generes
+*.dif
+out/
+out_pnm/
+tmp_image.pnm
+
+# documents inutiles
+*.pdf
+
+# systeme
+.DS_Store
